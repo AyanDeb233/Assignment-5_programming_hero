@@ -1,9 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-gray-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github-Issue-Tracker</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/github-logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- tailwind & daisy khala add -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn add  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font style add  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Geist:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Geist", sans-serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <section class="p-5">
+      <div
+        class="bg-gray-100 mt-[60px] mb-[60px] w-full max-w-[520px] mx-auto rounded-lg space-y-5 p-8 shadow-sm"
+      >
+        <div class="pt-[30px]">
+          <img class="mx-auto" src="./assets/github-logo.png" alt="" />
+        </div>
+
+        <div class="text-center">
+          <h1 class="text-[24px] font-medium">GitHub Issues Tracker</h1>
+          <p class="text-[16px] text-gray-500">Sign in to manage your issues</p>
+        </div>
+
+        <div class="form flex flex-col space-y-1">
+          <label for="" class="text-[16px] font-medium">Username</label>
+          <input
+            type="text"
+            class="p-3 border-gray-500 rounded-lg"
+            placeholder="Enter Username"
+          />
+          <h1 class="text-[14px] text-[#4503e8] font-medium">Default: admin</h1>
+        </div>
+
+        <div class="form flex flex-col space-y-1">
+          <label for="" class="text-[16px] font-medium">Password</label>
+          <input
+            type="password"
+            class="p-3 border-gray-500 rounded-lg"
+            placeholder="Enter Password"
+          />
+          <h1 class="text-[14px] text-[#4503e8] font-medium">
+            Default: admin123
+          </h1>
+        </div>
+        <button
+          class="btn btn-primary w-full h-[48px] font-semibold rounded-lg text-[16px]"
+        >
+          Sign In
+        </button>
+
+        <div class="flex items-center gap-3">
+          <hr class="flex-1 border-gray-400" />
+          <h1>OR</h1>
+          <hr class="flex-1 border-gray-400" />
+        </div>
+
+        <div class="">
+          <h1 class="text-center text-gray-500">Demo Credentials:</h1>
+        </div>
+
+        <div class="bg-gray-200 rounded-lg text-center py-8">
+          <h1 class="text-[16px]">
+            <span class="font-semibold">Username:</span> admin
+          </h1>
+          <h1 class="text-[16px]">
+            <span class="font-semibold">Password:</span> admin123
+          </h1>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
