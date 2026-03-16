@@ -12,7 +12,7 @@ document.getElementById("btn-login").addEventListener("click", function () {
   // give confirm alert otherwise return ticket
   if (nameValue == "admin" && passwordValue == "admin123") {
     alert("login Successful");
-    window.location.assign("/homepage.html");
+    window.location.assign("./homepage.html");
   } else {
     alert("login failed.please try again");
     return;
