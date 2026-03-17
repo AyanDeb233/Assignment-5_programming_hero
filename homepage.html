@@ -47,6 +47,7 @@
       <div
         class="navbar px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between shadow-sm gap-3"
       >
+        <!-- github icon section  -->
         <div class="section1">
           <div class="flex items-center gap-1">
             <img
@@ -63,6 +64,7 @@
         <div
           class="section2 flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-2"
         >
+          <!-- search bar section  -->
           <div>
             <label class="input">
               <svg
@@ -84,6 +86,7 @@
               <input type="search" required placeholder="Search issues..." />
             </label>
           </div>
+          <!-- new issue btn section  -->
           <button class="btn btn-primary w-full sm:w-auto">
             <i class="fa-solid fa-plus"></i>
             <h1 class="text-[16px]">New Issue</h1>
@@ -91,5 +94,34 @@
         </div>
       </div>
     </section>
+
+    <!-- toggle section  -->
+    <section class="max-w-[70%] mx-auto pt-12">
+      <div class="toggle-bar border border-gray-400 p-5 rounded-lg shadow-sm">
+        <div class="join flex w-full max-w-md gap-2">
+          <input
+            class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
+            type="radio"
+            name="options"
+            aria-label="All"
+            checked
+          />
+          <input
+            class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
+            type="radio"
+            name="options"
+            aria-label="Open"
+          />
+          <input
+            class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
+            type="radio"
+            name="options"
+            aria-label="Closed"
+          />
+        </div>
+      </div>
+    </section>
+
+    
   </body>
 </html>
