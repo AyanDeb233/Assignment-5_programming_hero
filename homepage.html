@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-[#f8fafc]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +43,7 @@
   </head>
   <body>
     <!-- navbar  -->
-    <section>
+    <section class="bg-white">
       <div
         class="navbar px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between shadow-sm gap-3"
       >
@@ -96,10 +96,11 @@
     </section>
 
     <!-- toggle section  -->
-    <section class="max-w-[70%] mx-auto pt-12">
-      <div class="toggle-bar border border-gray-400 p-5 rounded-lg shadow-sm">
+    <section class="max-w-[70%] mx-auto mt-12 bg-white">
+      <div class="toggle-bar border border-gray-300 p-5 rounded-lg shadow-sm">
         <div class="join flex w-full max-w-md gap-2">
           <input
+            onclick="showIssues('all')"
             class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
             type="radio"
             name="options"
@@ -107,12 +108,14 @@
             checked
           />
           <input
+            onclick="showIssues('open')"
             class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
             type="radio"
             name="options"
             aria-label="Open"
           />
           <input
+            onclick="showIssues('closed')"
             class="join-item btn flex-1 text-gray-500 checked:text-white shadow-sm border border-gray-400 rounded-lg"
             type="radio"
             name="options"
@@ -122,6 +125,52 @@
       </div>
     </section>
 
-    
+    <!-- total issues count & card container-->
+    <section
+      class="max-w-[70%] mx-auto mt-4 shadow-sm border border-gray-300 bg-white rounded-lg"
+    >
+      <!-- count issues section  -->
+      <div
+        class="p-5 flex flex-col sm:flex-row justify-between border-b-4 border-b-gray-300 gap-4"
+      >
+        <!-- left side -->
+        <div class="flex items-center gap-2">
+          <div
+            class="w-[50px] h-[50px] bg-[#ece4ff] rounded-full flex justify-center items-center"
+          >
+            <img class="w-[27px] h-[27px]" src="./assets/Aperture.png" alt="" />
+          </div>
+          <div>
+            <h1 class="text-[20px] font-semibold">
+              <span id="count">50</span> Issues
+            </h1>
+            <p class="text-[16px] text-gray-500">
+              Track and manage your project issues
+            </p>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="flex gap-3">
+          <div class="open flex items-center gap-2">
+            <i class="fa-solid fa-circle text-[#00a96e]"></i>
+            <h1>Open</h1>
+          </div>
+
+          <div class="close flex items-center gap-2">
+            <i class="fa-solid fa-circle text-[#a855f7]"></i>
+            <h1>Closed</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- card container -->
+      <div
+        id="card-container"
+        class="card-container-cls grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 px-6 mb-6"
+      ></div>
+    </section>
+
+    <script src="homepage.js"></script>
   </body>
 </html>
