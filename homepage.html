@@ -83,11 +83,16 @@
                   <path d="m21 21-4.3-4.3"></path>
                 </g>
               </svg>
-              <input type="search" required placeholder="Search issues..." />
+              <input
+                id="input-btn"
+                type="search"
+                required
+                placeholder="Search issues..."
+              />
             </label>
           </div>
           <!-- new issue btn section  -->
-          <button class="btn btn-primary w-full sm:w-auto">
+          <button id="search-btn" class="btn btn-primary w-full sm:w-auto">
             <i class="fa-solid fa-plus"></i>
             <h1 class="text-[16px]">New Issue</h1>
           </button>
@@ -184,22 +189,6 @@
         class="card-container-cls grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 px-6 mb-6"
       ></div>
     </section>
-
-    <!-- modal section  -->
-    <!-- Open the modal using ID.showModal() method -->
-    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
-        <div class="modal-action">
-          <form method="dialog">
-             if there is a button in form, it will close the modal -->
-    <!-- <button class="btn">Close</button>
-          </form>
-        </div>
-      </div>
-    </dialog> -->
 
     <script src="homepage.js"></script>
   </body>

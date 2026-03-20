@@ -1,10 +1,10 @@
-console.log("hey buddy");
-
 let issues = [];
 const counting = document.getElementById("count");
 const cardContainer = document.getElementById("card-container");
 const btnCard = document.getElementById("btn-card");
 const spinning = document.getElementById("spinner");
+const inputBtn = document.getElementById("input-btn");
+const searchBtn = document.getElementById("search-btn");
 
 const spinninMachine = (bar) => {
   if (bar == true) {
@@ -107,7 +107,7 @@ const modaling = (id) => {
               <!-- 1 -->
               <div class="text-[16px]">
                 <h1 class="text-gray-500">Assignee:</h1>
-                <h1 class="font-semibold">${info.assignee ? info.assignee : "Not assign"}</h1>
+                <h1 class="font-semibold">${info.assignee ? info.assignee : "Unassigned"}</h1>
               </div>
               <!-- 2 -->
               <div>
@@ -188,7 +188,7 @@ const displayData = (information) => {
                      <h1 class="text-orange-500 font-semibold text-center text-xs">MEDIUM</h1>
                      </div>`
                       : `<div class="p-1 bg-gray-100 rounded-3xl w-[80px]">
-                     <h1 class="text-gray-500 font-semibold text-center text-xs">LOW</h1>
+                     <h1 class="text-gray-500 font-semibold text-center text-[12px]">LOW</h1>
                     </div>`
                 }
                 </div>
@@ -217,3 +217,23 @@ const displayData = (information) => {
   }
 };
 loadData();
+
+searchBtn.addEventListener("click", () => {
+  const input = inputBtn.value.trim().toLowerCase();
+  if (!input) {
+    loadData();
+    return;
+  }
+  fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${input}`)
+    .then((res) => res.json())
+    .then((result) => {
+      const output = result.data;
+      counting.innerText = output.length;
+      displayData(output);
+    });
+});
+inputBtn.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    searchBtn.click();
+  }
+});
