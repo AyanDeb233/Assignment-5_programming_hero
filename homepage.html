@@ -95,6 +95,14 @@
       </div>
     </section>
 
+    <!-- modal card  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_1" class="modal">
+      <div id="modal-container" class="modal-box">
+        <!-- main div section -->
+      </div>
+    </dialog>
+
     <!-- toggle section  -->
     <section class="max-w-[70%] mx-auto mt-12 bg-white">
       <div class="toggle-bar border border-gray-300 p-5 rounded-lg shadow-sm">
@@ -125,8 +133,14 @@
       </div>
     </section>
 
+    <!-- spinner section  -->
+    <div id="spinner" class="flex justify-center items-center hidden my-3">
+      <span class="loading loading-bars text-primary loading-xl"></span>
+    </div>
+
     <!-- total issues count & card container-->
     <section
+      id="btn-card"
       class="max-w-[70%] mx-auto mt-4 shadow-sm border border-gray-300 bg-white rounded-lg"
     >
       <!-- count issues section  -->
@@ -170,6 +184,22 @@
         class="card-container-cls grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 px-6 mb-6"
       ></div>
     </section>
+
+    <!-- modal section  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+             if there is a button in form, it will close the modal -->
+    <!-- <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog> -->
 
     <script src="homepage.js"></script>
   </body>
